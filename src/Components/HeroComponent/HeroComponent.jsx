@@ -21,7 +21,9 @@ export default function HeroComponent() {
             </h1>
 
             <br />
-            <h3>We have 3M+ Live Jobs</h3>
+            <h3>
+              We have <span>3M+</span> Live Jobs
+            </h3>
             <br />
             <Link to="./jobs">
               <button>Explor Now</button>
