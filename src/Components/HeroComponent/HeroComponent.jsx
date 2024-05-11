@@ -13,7 +13,7 @@ export default function HeroComponent() {
             className={style.heroText}
           >
             <h1>
-              Wecome to <span>Halal Jibika</span>,
+              Wecome to <span> Halal Jibika</span>,
             </h1>
             <h1>
               Without Compromising on Your DEEN Find Your{" "}
