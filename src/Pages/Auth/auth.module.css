@@ -1,0 +1,108 @@
+/* SignInSignUpPage.module.css */
+
+.container {
+  display: flex;
+}
+
+.flex{
+  display: flex;
+  justify-content: space-between;
+}
+.container a{
+  text-decoration: none;
+  color: var(--deepGreen);
+}
+
+.authImage {
+  flex: 1;
+  overflow: hidden;
+}
+.authImage img {
+  width: 100%;
+}
+
+.formContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  max-width: 400px;
+  border-radius: 10px;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 {
+  text-align: center;
+}
+
+.inputGroup {
+  margin-bottom: 15px;
+}
+textarea{
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--deepGreen);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--lightGreen);
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.icon {
+  background-color: #313131;
+  padding: 5px;
+  border-radius: 2pc;
+  width: 40%;
+  font-size: 30px;
+  cursor: pointer;
+  transition: color 0.3s;
+  color: #ffffff;
+}
+
+.icon:hover {
+  transform: scale(1.05);
+  transition: all .5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .authImage {
+    height: 300px;
+  }
+
+  .formContainer {
+    order: -1;
+  }
+}

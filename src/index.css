@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Space+Grotesk:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+  /* padding-inline: 20px; */
+}
+:root {
+  --deepGreen: #2bb573;
+  --lightGreen: #82d32d;
+}
+div a.active {
+  background-color: rgb(200, 250, 150);
+}
+h1 {
+  font-size: clamp(27px, 5vw, 34px);
+  font-weight: 700;
+}
+h2 {
+  font-size: clamp(21px, 5vw, 27px);
+  font-weight: 600;
+}
+h3 {
+  font-size: clamp(17px, 5vw, 21px);
+  font-weight: 600;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.primary-btn {
+  padding: 10px 30px;
+  background-color: var(--deepGreen);
+  color: white;
+  border: none;
+  border-radius: 5pc;
+  margin-top: 10px;
+}
+.primary-btn:hover {
+  background-color: var(--lightGreen);
+}
+.secondary-btn {
+  padding: 10px 30px;
+  background: rgba(25, 164, 99, 0.15);
+  color: var(--deepGreen);
+  border: none;
+  border-radius: 5pc;
+  font-weight: 900px;
+  font-size: 16px;
+}
+.secondary-btn:hover {
+  background: var(--deepGreen);
+  color: white;
+  transition: 1s;
+}
+.icon {
+  font-size: 21px;
+  color: var(--deepGreen);
+  padding: 5px 5px 2px 5px;
+}
+.icon:hover {
+  background-color: var(--deepGreen);
+  border-radius: 2pc;
+  color: white;
+  transition: 1s;
+}
+.title {
+  font-size: clamp(31px, 5vw, 37px);
+  font-weight: 700;
+  margin: 21px 0px 34px 0px;
+  text-align: center;
+}
