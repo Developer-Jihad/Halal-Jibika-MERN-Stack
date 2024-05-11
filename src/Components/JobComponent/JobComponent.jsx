@@ -15,7 +15,6 @@ export default function JobComponent({
   isApplied,
 }) {
   const { title, position, logo, _id, description, companyName } = job;
-  // console.log(_id);
 
   const handleDeleteRequest = async () => {
     try {
