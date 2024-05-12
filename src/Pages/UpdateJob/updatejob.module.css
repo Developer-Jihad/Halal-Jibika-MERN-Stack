@@ -1,0 +1,57 @@
+/* AddJobForm.module.css */
+
+.addJobContainer {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.leftColumn {
+  flex: 1;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+}
+
+.rightColumn {
+  flex: 1;
+  padding: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+}
+
+input,
+textarea {
+  padding: 8px;
+  margin-bottom: 16px;
+}
+
+button {
+  padding: 10px;
+  background-color: var(--deepGreen);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: var(--lightGreen);
+}
+
+@media (max-width: 768px) {
+  .addJobContainer {
+    flex-direction: column;
+  }
+}

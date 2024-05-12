@@ -59,9 +59,11 @@ export default function JobComponent({
             <BiDetail />
           </div>
         </Link>
-        <div className="icon">
-          <BiSolidEdit />
-        </div>
+        <Link to={`/updatejob/${_id}`}>
+          <div className="icon">
+            <BiSolidEdit />
+          </div>
+        </Link>
         <div onClick={handleDeleteRequest} className="icon">
           <RiDeleteBin4Fill />
         </div>
