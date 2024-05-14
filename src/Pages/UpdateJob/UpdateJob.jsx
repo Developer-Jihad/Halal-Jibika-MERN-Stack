@@ -45,7 +45,7 @@ const UpdateJob = () => {
     e.preventDefault();
     try {
       const response = await axios.put(
-        `http://localhost:9000/jobs/${paramsId}`,
+        `https://server-halal-jibika.vercel.app/jobs/${paramsId}`,
         formData
       );
       console.log("Put Response:", response.data);

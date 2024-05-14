@@ -24,7 +24,10 @@ const AddJobForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:9000/jobs", formData);
+      const response = await axios.post(
+        "https://server-halal-jibika.vercel.app/jobs",
+        formData
+      );
       console.log("POST Response:", response.data);
     } catch (error) {
       console.error("Error creating post: ", error);

@@ -21,7 +21,7 @@ const routes = createBrowserRouter([
     element: <App />,
     id: "root",
     loader: () => {
-      return axios.get(`http://localhost:9000/jobs`);
+      return axios.get(`https://server-halal-jibika.vercel.app/jobs`);
     },
     children: [
       {
