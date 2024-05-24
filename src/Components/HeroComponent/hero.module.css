@@ -1,49 +1,49 @@
-
-.hero{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
 }
-.hero span{
-color: var(--lightGreen);
+.hero span {
+  color: var(--lightGreen);
 }
-.hero h3{
-    color: gray;
+.hero h3 {
+  color: gray;
 }
-.heroText{
-    width: 100%;
+.heroText {
+  width: 100%;
 }
-.hero h1{
-    line-height: 60px;
+.hero h1 {
+  line-height: 60px;
 }
-.heroImg{
-    width: 90%;
+.heroImg {
+  width: 90%;
 }
-.hero img{
-    width: 100%;
+.hero img {
+  width: 100%;
 }
-.hero button{
-    margin-top: 10px;
-    padding: 10px 35px;
-    font-size: clamp(13px, 5vw, 21px);
-    font-weight: bold;
-    border-radius: 3pc;
-    background-color: var(--deepGreen);
-    border: none;
-    color: white;
+.hero button {
+  margin-top: 10px;
+  padding: 10px 35px;
+  font-size: clamp(13px, 5vw, 21px);
+  font-weight: bold;
+  border-radius: 3pc;
+  background-color: var(--deepGreen);
+  border: none;
+  color: white;
 }
-.hero button:hover{
-    background-color: var(--lightGreen);
-    transition: 1s;
+.hero button:hover {
+  background-color: var(--lightGreen);
+  transition: 1s;
 }
 @media (max-width: 768px) {
-    .hero{
-        flex-direction: column;
-    }
-    .heroImg{
-        width: 100%;
-    }
-    .hero h1{
-        line-height: 40px;
-    }
+  .hero {
+    flex-direction: column;
   }
+  .heroImg {
+    width: 100%;
+  }
+  .hero h1 {
+    line-height: 40px;
+  }
+}
