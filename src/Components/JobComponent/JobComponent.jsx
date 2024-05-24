@@ -19,7 +19,7 @@ export default function JobComponent({
   const handleDeleteRequest = async () => {
     try {
       const response = await axios.delete(
-        `https://server-halal-jibika.vercel.app/jobs/${_id}`
+        `https://halal-jibika-server.onrender.com/jobs/${_id}`
       );
       handleDelete(_id);
       console.log("DELETE Response:", response.data);

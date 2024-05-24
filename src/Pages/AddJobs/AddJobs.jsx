@@ -25,7 +25,7 @@ const AddJobForm = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://server-halal-jibika.vercel.app/jobs",
+        "https://halal-jibika-server.onrender.com/jobs",
         formData
       );
       console.log("POST Response:", response.data);
