@@ -3,7 +3,7 @@ import { BiDetail } from "react-icons/bi";
 import style from "./job.module.css";
 import { BiSolidEdit } from "react-icons/bi";
 import { RiDeleteBin4Fill } from "react-icons/ri";
-import axios from "axios";
+// import axios from "axios";
 import { Link } from "react-router-dom";
 
 export default function JobComponent({
@@ -17,15 +17,16 @@ export default function JobComponent({
   const { title, position, logo, _id, description, companyName } = job;
 
   const handleDeleteRequest = async () => {
-    try {
-      const response = await axios.delete(
-        `https://halal-jibika-server.onrender.com/jobs/${_id}`
-      );
-      handleDelete(_id);
-      console.log("DELETE Response:", response.data);
-    } catch (error) {
-      console.error("Error deleting post: ", error);
-    }
+    alert("Only Admin can Delete Jobs");
+    // try {
+    //   const response = await axios.delete(
+    //     `https://halal-jibika-server.onrender.com/jobs/${_id}`
+    //   );
+    //   handleDelete(_id);
+    //   console.log("DELETE Response:", response.data);
+    // } catch (error) {
+    //   console.error("Error deleting post: ", error);
+    // }
   };
 
   return (

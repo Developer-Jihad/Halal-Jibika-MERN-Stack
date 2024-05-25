@@ -1,11 +1,10 @@
-import React from "react";
 import { FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
-import { FaFacebook } from "react-icons/fa";
+
 import img from "../../../assets/images/login.gif";
 import styles from "../auth.module.css";
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+
 import {
   useCreateUserWithEmailAndPassword,
   useSignInWithGithub,
@@ -17,6 +16,8 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const SignUp = () => {
+  const navigate = useNavigate();
+
   const [signInWithGoogle] = useSignInWithGoogle(auth);
   const [signInWithGithub] = useSignInWithGithub(auth);
 
@@ -43,11 +44,14 @@ const SignUp = () => {
   const notify = () => {
     toast.success("Success Notification !", {
       position: toast.POSITION.TOP_CENTER,
-      autoClose: 1000
+      autoClose: 1000,
     });
   };
   if (loading) {
     notify();
+  }
+  if (user) {
+    navigate("/");
   }
 
   return (

@@ -1,8 +1,7 @@
-import React from "react";
 import { FaGithub } from "react-icons/fa";
 import styles from "../auth.module.css";
 import img from "../../../assets/images/login.gif";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import {
   useSignInWithEmailAndPassword,
@@ -14,6 +13,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const SignIn = () => {
+  const navigate = useNavigate();
   const [signInWithGoogle] = useSignInWithGoogle(auth);
   const [signInWithGithub] = useSignInWithGithub(auth);
 
@@ -30,8 +30,10 @@ const SignIn = () => {
   const notify = () => {
     toast("Default Notification !", { autoClose: 1000 });
   };
+
   if (user) {
     notify();
+    navigate("/");
   }
 
   return (

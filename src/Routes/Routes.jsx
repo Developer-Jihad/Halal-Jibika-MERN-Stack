@@ -42,19 +42,11 @@ const routes = createBrowserRouter([
       },
       {
         path: "/favorite",
-        element: (
-          <PrivateRoutes>
-            <Favourite />
-          </PrivateRoutes>
-        ),
+        element: <Favourite />,
       },
       {
         path: "/applied",
-        element: (
-          <PrivateRoutes>
-            <Applied />
-          </PrivateRoutes>
-        ),
+        element: <Applied />,
       },
       {
         path: "/addjobs",
@@ -66,11 +58,7 @@ const routes = createBrowserRouter([
       },
       {
         path: "/updatejob/:id",
-        element: (
-          // <PrivateRoutes>
-          <UpdateJob></UpdateJob>
-          // </PrivateRoutes>
-        ),
+        element: <UpdateJob></UpdateJob>,
       },
       {
         path: "/details/:id",

@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
-import { useParams, useRouteLoaderData } from "react-router-dom";
+import { useNavigate, useParams, useRouteLoaderData } from "react-router-dom";
 import img from "../../assets/images/addjob.gif";
 import styles from "./updatejob.module.css";
-import axios from "axios";
+// import axios from "axios";
 
 const UpdateJob = () => {
+  const navigate = useNavigate();
   const paramsId = useParams().id;
   const data = useRouteLoaderData("root").data.find(
     (job) => job._id == paramsId
@@ -43,23 +44,25 @@ const UpdateJob = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      const response = await axios.put(
-        `https://halal-jibika-server.onrender.com/jobs/${paramsId}`,
-        formData
-      );
-      console.log("Put Response:", response.data);
-      // Clear form after successful submission
-      setFormData({
-        companyName: "",
-        position: "",
-        title: "",
-        logo: "",
-        description: "",
-      });
-    } catch (error) {
-      console.error("Error updating job: ", error);
-    }
+    alert("Only Admin Can Edit Jobs");
+    navigate("/");
+    // try {
+    //   const response = await axios.put(
+    //     `https://halal-jibika-server.onrender.com/jobs/${paramsId}`,
+    //     formData
+    //   );
+    //   console.log("Put Response:", response.data);
+    //   // Clear form after successful submission
+    //   setFormData({
+    //     companyName: "",
+    //     position: "",
+    //     title: "",
+    //     logo: "",
+    //     description: "",
+    //   });
+    // } catch (error) {
+    //   console.error("Error updating job: ", error);
+    // }
   };
 
   if (!data) {

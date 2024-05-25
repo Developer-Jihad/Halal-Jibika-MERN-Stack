@@ -11,9 +11,9 @@ export default function Jobs() {
   const [favJobsIds, addToFavorite] = useLocalStorage("favJobIds");
   const [appliedJobIds, addToApplied] = useLocalStorage("appliedJobIds");
 
-  const handleDelete = (id) => {
-    setJobs((prevJobs) => prevJobs.filter((job) => job._id !== id));
-  };
+  // const handleDelete = (id) => {
+  //   setJobs((prevJobs) => prevJobs.filter((job) => job._id !== id));
+  // };
 
   return (
     <div className="container">
@@ -23,7 +23,7 @@ export default function Jobs() {
           <JobComponent
             isFav={!!favJobsIds[job._id]}
             isApplied={!!appliedJobIds[job._id]}
-            handleDelete={handleDelete}
+            // handleDelete={handleDelete}
             addToApplied={addToApplied}
             addToFavorite={addToFavorite}
             key={job._id}
