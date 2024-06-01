@@ -1,11 +1,13 @@
 import { useState } from "react";
-import { useRouteLoaderData } from "react-router-dom";
+import { Link, useRouteLoaderData } from "react-router-dom";
 import JobComponent from "../../Components/JobComponent/JobComponent";
 import style from "./jobs.module.css";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
 
 export default function Jobs() {
-  const [jobs, setJobs] = useState(useRouteLoaderData("root").data);
+  const [jobs, setJobs] = useState(useRouteLoaderData("root"));
+  console.log(jobs);
+
   console.log(jobs);
 
   const [favJobsIds, addToFavorite] = useLocalStorage("favJobIds");

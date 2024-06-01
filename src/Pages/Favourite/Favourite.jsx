@@ -5,7 +5,7 @@ import style from "../Jobs/jobs.module.css";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
 
 export default function Favourite() {
-  const [jobs, setJobs] = useState(useRouteLoaderData("root").data);
+  const [jobs, setJobs] = useState(useRouteLoaderData("root"));
 
   const [favJobsIds, addToFavorite] = useLocalStorage("favJobIds");
 
@@ -24,7 +24,7 @@ export default function Favourite() {
       </h1>
       <div className={style.jobs}>
         {isFavEmpty &&
-          jobs.map((job) => {
+          jobs?.map((job) => {
             if (!favJobsIds[job._id]) return null;
             return (
               <JobComponent

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import img from "../../assets/images/addjob.gif";
 import styles from "./addjob.module.css";
-import axios from "axios";
+// import axios from "axios";
 
 const AddJobForm = () => {
   const [formData, setFormData] = useState({
@@ -23,23 +23,24 @@ const AddJobForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      const response = await axios.post(
-        "https://halal-jibika-server.onrender.com/jobs",
-        formData
-      );
-      console.log("POST Response:", response.data);
-    } catch (error) {
-      console.error("Error creating post: ", error);
-    }
-    console.log("Form submitted:", formData);
-    setFormData({
-      companyName: "",
-      position: "",
-      title: "",
-      logo: "",
-      description: "",
-    });
+    alert("Only Admin can Add Jobs");
+    // try {
+    //   const response = await axios.post(
+    //     "https://halal-jibika-server.onrender.com/jobs",
+    //     formData
+    //   );
+    //   console.log("POST Response:", response.data);
+    // } catch (error) {
+    //   console.error("Error creating post: ", error);
+    // }
+    // console.log("Form submitted:", formData);
+    // setFormData({
+    //   companyName: "",
+    //   position: "",
+    //   title: "",
+    //   logo: "",
+    //   description: "",
+    // });
   };
 
   return (

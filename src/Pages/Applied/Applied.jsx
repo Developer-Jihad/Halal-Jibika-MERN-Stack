@@ -5,7 +5,7 @@ import style from "../Jobs/jobs.module.css";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
 
 export default function Applied() {
-  const [jobs, setJobs] = useState(useRouteLoaderData("root").data);
+  const [jobs, setJobs] = useState(useRouteLoaderData("root"));
 
   const [appliedJobIds, addToApplied] = useLocalStorage("appliedJobIds");
 
@@ -22,7 +22,7 @@ export default function Applied() {
       </h1>
       <div className={style.jobs}>
         {isApplied &&
-          jobs.map((job) => {
+          jobs?.map((job) => {
             if (appliedJobIds[job._id] === undefined) return null;
             return (
               <JobComponent

@@ -20,8 +20,16 @@ const routes = createBrowserRouter([
     path: "/",
     element: <App />,
     id: "root",
-    loader: () => {
-      return axios.get(`https://halal-jibika-server.onrender.com/jobs`);
+    loader: async () => {
+      try {
+        const response = await axios.get(
+          "https://server-halal-jibika.vercel.app/jobs"
+        ); // Assuming jobs.json is in the public directory
+        return response.data;
+      } catch (error) {
+        // Handle the error here
+        console.error("Error fetching jobs:", error);
+      }
     },
     children: [
       {

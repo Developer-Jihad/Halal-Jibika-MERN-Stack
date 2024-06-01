@@ -1,0 +1,42 @@
+[
+    {
+      "_id": "6641a0ad8573b875ffc15471",
+      "title": "Amazon Junior Development Program",
+      "logo": "https://html.creativegigstf.com/khuj/khuj/images/slider/slider-4.png",
+      "companyName": "Amazon",
+      "position": "Junior Developer",
+      "description": "This is a junior developer recruitment from Facebook"
+    },
+    {
+      "_id": "6641a0ad8573b875ffc15474",
+      "companyName": "Google",
+      "position": "Intern Developer",
+      "title": "Google Internship Program",
+      "logo": "https://html.creativegigstf.com/khuj/khuj/images/slider/slider-1.png",
+      "description": "This is an internship opportunity from Google"
+    },
+    {
+      "_id": "6641a0ad8573b875ffc15472",
+      "companyName": "Microsoft",
+      "position": "Senior Developer",
+      "title": "Microsoft Senior Development Program",
+      "logo": "https://html.creativegigstf.com/khuj/khuj/images/slider/slider-5.png",
+      "description": "This is a Senior developer recruitment from Microsoft"
+    },
+    {
+      "_id": "6641a0ad8573b875ffc15473",
+      "companyName": "Amazon",
+      "position": "Junior Developer",
+      "title": "Amazon Junior Development Program",
+      "logo": "https://html.creativegigstf.com/khuj/khuj/images/slider/slider-4.png",
+      "description": "This is a junior developer recruitment from Facebook"
+    },
+    {
+      "_id": "6641a0ad8573b875ffc15470",
+      "title": "Google Internship Program",
+      "logo": "https://html.creativegigstf.com/khuj/khuj/images/slider/slider-1.png",
+      "companyName": "Google",
+      "position": "Intern Developer Job",
+      "description": "This is an internship opportunity from Google"
+    }
+  ]
