@@ -21,7 +21,7 @@ export default function Jobs() {
     <div className="container">
       <h1 className="title">Perfect Jobs For You</h1>
       <div className={style.jobs}>
-        {jobs.map((job) => (
+        {jobs?.map((job) => (
           <JobComponent
             isFav={!!favJobsIds[job._id]}
             isApplied={!!appliedJobIds[job._id]}

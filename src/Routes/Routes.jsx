@@ -21,16 +21,35 @@ const routes = createBrowserRouter([
     element: <App />,
     id: "root",
     loader: async () => {
+      const primaryUrl = "https://server-halal-jibika.vercel.app/jobs";
+      const backupUrl = "/jobs.json"; // Assuming jobs.json is in the public directory
+
       try {
-        const response = await axios.get(
-          "https://server-halal-jibika.vercel.app/jobs"
-        ); // Assuming jobs.json is in the public directory
+        const response = await axios.get(primaryUrl);
+        if (!response.data) {
+          throw new Error("No data returned from the primary server.");
+        }
         return response.data;
-      } catch (error) {
-        // Handle the error here
-        console.error("Error fetching jobs:", error);
+      } catch (primaryError) {
+        console.error("Error fetching jobs from primary URL:", primaryError);
+        try {
+          const backupResponse = await axios.get(backupUrl);
+          if (!backupResponse.data) {
+            throw new Error("No data returned from the backup source.");
+          }
+          return backupResponse.data;
+        } catch (backupError) {
+          console.error("Error fetching jobs from backup URL:", backupError);
+          throw new Error(
+            "Failed to fetch jobs from both sources. Please try again later."
+          );
+        }
+      } finally {
+        // Code here will always run, regardless of success or error
+        console.log("Request completed.");
       }
     },
+
     children: [
       {
         path: "/",

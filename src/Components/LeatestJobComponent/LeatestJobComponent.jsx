@@ -1,6 +1,6 @@
 import { useState } from "react";
 import style from "./leatestJob.module.css";
-import { Link, useRouteLoaderData } from "react-router-dom";
+import { useRouteLoaderData } from "react-router-dom";
 import JobComponent from "../JobComponent/JobComponent";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
 
@@ -8,7 +8,7 @@ export default function LeatestJobComponent() {
   const [jobs, setJobs] = useState(useRouteLoaderData("root"));
   console.log(jobs);
 
-  const leatesJobs = jobs.slice(0, 3);
+  const leatesJobs = jobs?.slice(0, 3);
   const [favJobsIds, addToFavorite] = useLocalStorage("favJobIds");
   const [appliedJobIds, addToApplied] = useLocalStorage("appliedJobIds");
 

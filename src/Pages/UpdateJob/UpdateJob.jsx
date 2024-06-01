@@ -7,7 +7,7 @@ import styles from "./updatejob.module.css";
 const UpdateJob = () => {
   const navigate = useNavigate();
   const paramsId = useParams().id;
-  const data = useRouteLoaderData("root").find((job) => job._id == paramsId);
+  const data = useRouteLoaderData("root")?.find((job) => job._id == paramsId);
 
   // Initialize formData with data values once data is available
   const [formData, setFormData] = useState({

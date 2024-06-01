@@ -12,7 +12,7 @@ export default function Favourite() {
   const isFavEmpty = !!Object.values(favJobsIds);
 
   const handleDelete = (id) => {
-    setJobs((prevJobs) => prevJobs.filter((job) => job._id !== id));
+    setJobs((prevJobs) => prevJobs?.filter((job) => job._id !== id));
   };
 
   return (
