@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useRouteLoaderData } from "react-router-dom";
+import { useRouteLoaderData } from "react-router-dom";
 import JobComponent from "../../Components/JobComponent/JobComponent";
 import style from "./jobs.module.css";
 import { useLocalStorage } from "../../hooks/useLocalStorage";

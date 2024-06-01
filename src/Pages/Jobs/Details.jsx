@@ -5,9 +5,7 @@ import { MdFavoriteBorder } from "react-icons/md";
 
 export default function Details() {
   const paramsId = useParams().id;
-  const data = useRouteLoaderData("root").data.find(
-    (job) => job._id == paramsId
-  );
+  const data = useRouteLoaderData("root").find((job) => job._id == paramsId);
   console.log(paramsId);
   console.log(data);
   const { title, position, logo, description, companyName } = data;
